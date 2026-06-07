@@ -1,0 +1,70 @@
+/* PILLARS */
+.pillars-section {
+  background: var(--surface);
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--border);
+  margin-top: 3rem;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.pillar-item {
+  background: var(--black);
+  padding: 3rem;
+  transition: background 0.3s;
+}
+
+.pillar-item:hover {
+  background: var(--surface2);
+}
+
+.pillar-num {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.pillar-title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+}
+
+.pillar-title .accent {
+  color: var(--accent);
+}
+
+.pillar-desc {
+  color: var(--muted);
+  font-size: 0.9rem;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.pillar-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.pillar-tag {
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  color: var(--muted);
+  font-size: 0.75rem;
+  padding: 0.3rem 0.75rem;
+  border-radius: 100px;
+  font-family: var(--font-mono);
+}
+
+@media (max-width: 900px) {
+  .pillars-grid { grid-template-columns: 1fr; }
+}

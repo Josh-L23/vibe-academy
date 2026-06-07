@@ -1,0 +1,102 @@
+/* AI HUB */
+.ai-hub-section {
+  background: var(--surface);
+}
+
+.ai-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.ai-card {
+  background: var(--black);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.ai-card:hover {
+  border-color: rgba(155, 93, 229, 0.3);
+  transform: translateY(-2px);
+}
+
+.ai-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.ai-card-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.ai-card-icon.purple { background: rgba(155, 93, 229, 0.1); border: 1px solid rgba(155, 93, 229, 0.2); }
+.ai-card-icon.blue { background: rgba(77, 159, 255, 0.1); border: 1px solid rgba(77, 159, 255, 0.2); }
+
+.ai-card-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.ai-card-desc {
+  color: var(--muted);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  margin-bottom: 1.2rem;
+}
+
+.prompt-box {
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.6;
+}
+
+.prompt-box .prompt-label {
+  color: var(--accent);
+  display: block;
+  margin-bottom: 0.3rem;
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.tool-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.8rem;
+}
+
+.tool-chip {
+  padding: 0.25rem 0.6rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-family: var(--font-mono);
+  border: 1px solid;
+}
+
+.tool-chip.claude { color: #c084fc; border-color: rgba(192, 132, 252, 0.2); background: rgba(192, 132, 252, 0.05); }
+.tool-chip.cursor { color: #60a5fa; border-color: rgba(96, 165, 250, 0.2); background: rgba(96, 165, 250, 0.05); }
+.tool-chip.chatgpt { color: #4ade80; border-color: rgba(74, 222, 128, 0.2); background: rgba(74, 222, 128, 0.05); }
+.tool-chip.lovable { color: #f87171; border-color: rgba(248, 113, 113, 0.2); background: rgba(248, 113, 113, 0.05); }
+.tool-chip.bolt { color: #fb923c; border-color: rgba(251, 146, 60, 0.2); background: rgba(251, 146, 60, 0.05); }
+
+@media (max-width: 900px) {
+  .ai-grid { grid-template-columns: 1fr; }
+}

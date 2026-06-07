@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Academy ⚡ Learn. Build. Launch.</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="src/styles/main.css">
+</head>
+<body>
+
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- NAV -->
+    <nav>
+      <a href="#" class="nav-logo"><span class="bolt">⚡</span> Vibe Academy</a>
+      <div class="nav-links">
+        <a href="#why">Why Vibe</a>
+        <a href="#projects">Projects</a>
+        <a href="#challenges">Challenges</a>
+        <a href="#community">Community</a>
+        <a href="#ai-hub">AI Hub</a>
+      </div>
+      <a href="#cta" class="nav-cta">Join Free →</a>
+      <button class="nav-mobile-toggle">☰</button>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <canvas id="hero-canvas"></canvas>
+      <div class="hero-noise"></div>
+      <div class="hero-glow"></div>
+      <div class="floating-codes" id="floatingCodes"></div>
+      
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="dot"></span>
+          AI-FIRST COMMUNITY · AFRICA
+        </div>
+        
+        <h1 class="hero-title">
+          <span class="hero-line1">Build African</span><br>
+          <span class="hero-line2">
+            <span id="typewriter-text"></span><span class="cursor"></span>
+          </span><br>
+          <span class="hero-line3">From Prompt to Product.</span>
+        </h1>
+        
+        <p class="hero-sub">
+          Vibe Academy is where African builders learn, collaborate, and launch impactful products using AI, design, and technology.
+        </p>
+        
+        <div class="hero-actions">
+          <a href="#cta" class="btn-primary">⚡ Join the Community</a>
+          <a href="#projects" class="btn-secondary">Explore Projects →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <div class="stats-section reveal">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number" data-target="2400">0</div>
+          <div class="stat-label">Builders Joined</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="340">0</div>
+          <div class="stat-label">Projects Built</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="89">0</div>
+          <div class="stat-label">Challenges Completed</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number" data-target="12">0</div>
+          <div class="stat-label">African Countries</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WHY VIBE -->
+    <section id="why">
+      <div class="section-inner">
+        <div class="reveal">
+          <div class="section-tag">Why Vibe Academy</div>
+          <h2 class="section-title">Not just learning.<br><span style="color:var(--accent)">Building solutions.</span></h2>
+          <p class="section-sub">Most communities ask "how do I code?" We ask: what problem are you solving, and how can AI help you build the solution faster?</p>
+        </div>
+        
+        <div class="why-grid">
+          <div class="why-card reveal reveal-delay-1">
+            <div class="why-icon ai">🤖</div>
+            <div class="why-card-title">AI First</div>
+            <div class="why-card-text">Learn to leverage AI as a force multiplier. Claude, ChatGPT, Cursor — master the tools that 10x your output. Build in hours what used to take weeks.</div>
+          </div>
+          <div class="why-card reveal reveal-delay-2">
+            <div class="why-icon africa">🌍</div>
+            <div class="why-card-title">Africa Focused</div>
+            <div class="why-card-text">Build solutions for real African challenges — education access, agricultural tools, healthcare infrastructure, local fintech, and small business growth.</div>
+          </div>
+          <div class="why-card reveal reveal-delay-3">
+            <div class="why-icon product">🚀</div>
+            <div class="why-card-title">Product Driven</div>
+            <div class="why-card-text">We focus on launching, not just learning. Ship something real. Join a challenge. Get feedback. Iterate. The goal is impact, not just skill points.</div>
+          </div>
+          <div class="why-card reveal reveal-delay-4">
+            <div class="why-icon community">🤝</div>
+            <div class="why-card-title">Community Powered</div>
+            <div class="why-card-text">Learn together and grow together. Share what you discover, ask questions freely, get code reviews, and celebrate wins as a community of builders.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PILLARS -->
+    <section class="pillars-section" id="pillars">
+      <div class="section-inner">
+        <div class="reveal">
+          <div class="section-tag">What We Stand For</div>
+          <h2 class="section-title">Four pillars of<br><span style="color:var(--green)">everything we do</span></h2>
+        </div>
+        <div class="pillars-grid reveal">
+          <div class="pillar-item">
+            <div class="pillar-num">01 / LEARN</div>
+            <div class="pillar-title">🧠 <span class="accent">Intelligence</span> Amplified</div>
+            <div class="pillar-desc">Master the tools that define the next era. AI, software development, design thinking, and product strategy — not as separate courses but as one integrated skill set.</div>
+            <div class="pillar-tags">
+              <span class="pillar-tag">AI Tools</span>
+              <span class="pillar-tag">Dev</span>
+              <span class="pillar-tag">Design</span>
+              <span class="pillar-tag">Product</span>
+            </div>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-num">02 / COMMUNITY</div>
+            <div class="pillar-title">🤝 <span class="accent">Builders</span> Together</div>
+            <div class="pillar-desc">Ask questions without judgment. Share your discoveries. Get real feedback on your ideas. The knowledge of the community compounds for everyone.</div>
+            <div class="pillar-tags">
+              <span class="pillar-tag">Activity Feed</span>
+              <span class="pillar-tag">Mentorship</span>
+              <span class="pillar-tag">Reviews</span>
+            </div>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-num">03 / BUILD</div>
+            <div class="pillar-title">🚀 <span class="accent">Ship</span> Real Things</div>
+            <div class="pillar-desc">Create projects. Join challenges. Showcase your work. The act of building something real — even imperfect — teaches more than any course ever will.</div>
+            <div class="pillar-tags">
+              <span class="pillar-tag">Projects</span>
+              <span class="pillar-tag">Challenges</span>
+              <span class="pillar-tag">Showcase</span>
+            </div>
+          </div>
+          <div class="pillar-item">
+            <div class="pillar-num">04 / IMPACT</div>
+            <div class="pillar-title">🌍 <span class="accent">Africa</span> First</div>
+            <div class="pillar-desc">Every solution starts with a real problem. Education access, food systems, healthcare, finance — we build things that create opportunities for people, not just portfolios.</div>
+            <div class="pillar-tags">
+              <span class="pillar-tag">Healthcare</span>
+              <span class="pillar-tag">AgriTech</span>
+              <span class="pillar-tag">FinTech</span>
+              <span class="pillar-tag">EdTech</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECT SHOWCASE -->
+    <section id="projects">
+      <div class="section-inner">
+        <div class="reveal" style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1rem">
+          <div>
+            <div class="section-tag">Project Showcase</div>
+            <h2 class="section-title">Built by the<br><span style="color:var(--accent2)">community</span></h2>
+          </div>
+          <a href="#" class="btn-secondary" style="margin-bottom:.5rem">View All Projects →</a>
+        </div>
+        
+        <div class="showcase-grid">
+          <div class="project-card reveal reveal-delay-1">
+            <div class="project-thumb project-thumb-1">
+              <div class="project-thumb-glow thumb-1-glow"></div>
+              🌾
+            </div>
+            <div class="project-body">
+              <span class="project-tag">AgriTech · Malawi</span>
+              <div class="project-name">Malawi Farmer AI Assistant</div>
+              <div class="project-desc">AI-powered crop disease detection and market price advisory for smallholder farmers using mobile-first design.</div>
+              <div class="project-meta">
+                <div class="project-author">
+                  <div class="author-avatar" style="background:var(--accent)">CK</div>
+                  Chisomo K.
+                </div>
+                <div class="project-likes">❤️ 142 · 💬 28</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card reveal reveal-delay-2">
+            <div class="project-thumb project-thumb-2">
+              <div class="project-thumb-glow thumb-2-glow"></div>
+              ⚖️
+            </div>
+            <div class="project-body">
+              <span class="project-tag">LegalTech · Nigeria</span>
+              <div class="project-name">AI Legal Document Summarizer</div>
+              <div class="project-desc">Simplifies legal jargon into plain language for everyday Nigerians — contracts, tenancy agreements, and court documents.</div>
+              <div class="project-meta">
+                <div class="project-author">
+                  <div class="author-avatar" style="background:var(--green)">AO</div>
+                  Adesola O.
+                </div>
+                <div class="project-likes">❤️ 98 · 💬 19</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="project-card reveal reveal-delay-3">
+            <div class="project-thumb project-thumb-3">
+              <div class="project-thumb-glow thumb-3-glow"></div>
+              🛒
+            </div>
+            <div class="project-body">
+              <span class="project-tag">Commerce · Kenya</span>
+              <div class="project-name">Campus Marketplace</div>
+              <div class="project-desc">A peer-to-peer marketplace for university students to buy, sell, and trade items within their campus community.</div>
+              <div class="project-meta">
+                <div class="project-author">
+                  <div class="author-avatar" style="background:var(--blue)">WK</div>
+                  Wanjiru K.
+                </div>
+                <div class="project-likes">❤️ 76 · 💬 14</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CHALLENGES -->
+    <section id="challenges" class="challenge-section">
+      <div class="section-inner">
+        <div class="reveal">
+          <div class="section-tag">Monthly Challenges</div>
+          <h2 class="section-title">Solve real problems.<br><span style="color:var(--green)">Win recognition.</span></h2>
+        </div>
+        
+        <div class="challenge-card reveal">
+          <div class="challenge-badge">🔥 ACTIVE CHALLENGE</div>
+          <h3 class="challenge-title">"Improve access to education<br>in rural Africa."</h3>
+          <p class="challenge-desc">Build a product, tool, or AI-powered solution that meaningfully improves educational access for students in areas with limited infrastructure. Think offline-first, mobile-first, and language-inclusive.</p>
+          <div class="challenge-meta">
+            <div class="challenge-meta-item">
+              <span class="challenge-meta-label">Participants</span>
+              <span class="challenge-meta-val accent">147</span>
+            </div>
+            <div class="challenge-meta-item">
+              <span class="challenge-meta-label">Deadline</span>
+              <span class="challenge-meta-val">14 days</span>
+            </div>
+            <div class="challenge-meta-item">
+              <span class="challenge-meta-label">Submissions</span>
+              <span class="challenge-meta-val green">23</span>
+            </div>
+          </div>
+          <br><br>
+          <a href="#" class="btn-primary">Submit Your Solution ⚡</a>
+        </div>
+        
+        <div class="leaderboard reveal">
+          <div class="leaderboard-title">🏆 CURRENT LEADERBOARD</div>
+          
+          <div class="leader-item">
+            <div class="leader-rank gold">01</div>
+            <div class="leader-avatar" style="background:var(--accent)">CK</div>
+            <div class="leader-info">
+              <div class="leader-name">Chisomo Kalua <span class="rank-badge" style="background:rgba(245,166,35,.1);color:var(--accent);border:1px solid rgba(245,166,35,.2)">💎 Vibe Elite</span></div>
+              <div class="leader-role">Full-stack · Malawi</div>
+            </div>
+            <div class="leader-pts">2,840 pts</div>
+          </div>
+          
+          <div class="leader-item">
+            <div class="leader-rank silver">02</div>
+            <div class="leader-avatar" style="background:var(--blue)">AO</div>
+            <div class="leader-info">
+              <div class="leader-name">Adesola Okonkwo <span class="rank-badge" style="background:rgba(77,159,255,.1);color:var(--blue);border:1px solid rgba(77,159,255,.2)">🏆 Innovator</span></div>
+              <div class="leader-role">AI/ML · Nigeria</div>
+            </div>
+            <div class="leader-pts">2,210 pts</div>
+          </div>
+          
+          <div class="leader-item">
+            <div class="leader-rank bronze">03</div>
+            <div class="leader-avatar" style="background:var(--green)">WK</div>
+            <div class="leader-info">
+              <div class="leader-name">Wanjiru Kamau <span class="rank-badge" style="background:rgba(0,214,143,.1);color:var(--green);border:1px solid rgba(0,214,143,.2)">🚀 Creator</span></div>
+              <div class="leader-role">Design/Product · Kenya</div>
+            </div>
+            <div class="leader-pts">1,890 pts</div>
+          </div>
+          
+          <div class="leader-item">
+            <div class="leader-rank">04</div>
+            <div class="leader-avatar" style="background:var(--purple)">TM</div>
+            <div class="leader-info">
+              <div class="leader-name">Tendai Moyo <span class="rank-badge" style="background:rgba(155,93,229,.1);color:var(--purple);border:1px solid rgba(155,93,229,.2)">🔨 Builder</span></div>
+              <div class="leader-role">Backend/DevOps · Zimbabwe</div>
+            </div>
+            <div class="leader-pts">1,420 pts</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AI HUB -->
+    <section id="ai-hub" class="ai-hub-section">
+      <div class="section-inner">
+        <div class="reveal">
+          <div class="section-tag">AI Hub</div>
+          <h2 class="section-title">Share prompts. Share<br><span style="color:var(--purple)">workflows. Build faster.</span></h2>
+          <p class="section-sub">A marketplace of battle-tested prompts, AI workflows, and honest tool reviews — from builders who actually ship.</p>
+        </div>
+        
+        <div class="ai-grid">
+          <div class="ai-card reveal reveal-delay-1">
+            <div class="ai-card-header">
+              <div class="ai-card-icon purple">💬</div>
+              <div class="ai-card-title">Prompt Marketplace</div>
+            </div>
+            <div class="ai-card-desc">Community-curated prompts for real development tasks. Copy. Paste. Ship.</div>
+            <div class="prompt-box">
+              <span class="prompt-label">★ Top Prompt · NestJS</span>
+              Generate a complete NestJS backend architecture with auth, CRUD operations, and PostgreSQL schema for [app type]. Include DTOs, guards, and Swagger docs.
+            </div>
+            <div class="prompt-box" style="margin-top:.8rem">
+              <span class="prompt-label">★ Top Prompt · UI Generation</span>
+              Build a responsive Next.js landing page for [product]. Dark theme, glassmorphism cards, Framer Motion animations. Output full code.
+            </div>
+          </div>
+          
+          <div class="ai-card reveal reveal-delay-2">
+            <div class="ai-card-header">
+              <div class="ai-card-icon blue">⚡</div>
+              <div class="ai-card-title">AI Workflows</div>
+            </div>
+            <div class="ai-card-desc">Step-by-step systems from builders who ship MVPs in days, not months.</div>
+            <div class="prompt-box">
+              <span class="prompt-label">🔥 Trending Workflow</span>
+              How I built a full startup MVP in 3 days using Claude + Cursor<br><br>Step 1: Product definition with Claude<br>Step 2: Architecture plan (30 min)<br>Step 3: Backend scaffolding via Cursor<br>Step 4: UI with Lovable<br>Step 5: Deploy to Vercel + Railway
+            </div>
+          </div>
+          
+          <div class="ai-card reveal reveal-delay-3" style="grid-column:1/-1">
+            <div class="ai-card-header">
+              <div class="ai-card-icon purple">🛠️</div>
+              <div class="ai-card-title">Tool Reviews by Builders</div>
+            </div>
+            <div class="ai-card-desc">Honest reviews from builders who actually use these daily.</div>
+            <div class="tool-chips">
+              <span class="tool-chip claude">Claude ★★★★★ — "Best for complex reasoning and code architecture"</span>
+              <span class="tool-chip cursor">Cursor ★★★★☆ — "Game changer for editing existing codebases"</span>
+              <span class="tool-chip chatgpt">ChatGPT ★★★★☆ — "Solid for brainstorming and quick answers"</span>
+              <span class="tool-chip lovable">Lovable ★★★★☆ — "Best no-code UI builder I've used"</span>
+              <span class="tool-chip bolt">Bolt ★★★☆☆ — "Great for prototyping, gets messy at scale"</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMMUNITY FEED -->
+    <section id="community">
+      <div class="section-inner">
+        <div class="reveal" style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:1rem">
+          <div>
+            <div class="section-tag">Community Feed</div>
+            <h2 class="section-title">LinkedIn for<br><span style="color:var(--blue)">African builders</span></h2>
+          </div>
+          <a href="#" class="btn-secondary" style="margin-bottom:.5rem">Join to Post →</a>
+        </div>
+        
+        <div class="feed-preview">
+          <div class="feed-post reveal">
+            <div class="feed-avatar" style="background:var(--accent)">CK</div>
+            <div class="feed-content">
+              <div class="feed-header">
+                <span class="feed-name">Chisomo Kalua</span>
+                <span class="feed-country">🇲🇼 Malawi</span>
+                <span class="feed-tag">Win</span>
+                <span class="feed-time">2h ago</span>
+              </div>
+              <div class="feed-text">Just shipped v1.0 of the Farmer AI Assistant! 🌾 Used Claude to generate the crop disease detection logic and Cursor for the API. From idea to deployed in 4 days. This community pushed me to just ship it instead of perfecting it forever. Thank you all ⚡</div>
+              <div class="feed-actions">
+                <span class="feed-action">❤️ 48</span>
+                <span class="feed-action">💬 12 comments</span>
+                <span class="feed-action">🔗 Share</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="feed-post reveal reveal-delay-1">
+            <div class="feed-avatar" style="background:var(--purple)">TM</div>
+            <div class="feed-content">
+              <div class="feed-header">
+                <span class="feed-name">Tendai Moyo</span>
+                <span class="feed-country">🇿🇼 Zimbabwe</span>
+                <span class="feed-tag">Question</span>
+                <span class="feed-time">5h ago</span>
+              </div>
+              <div class="feed-text">Anyone else struggling with Railway cold starts for NestJS? My API has ~8s startup time which ruins the UX on free tier. Thinking of switching to a VPS. What are you all using for backend hosting in Africa with low latency?</div>
+              <div class="feed-actions">
+                <span class="feed-action">❤️ 23</span>
+                <span class="feed-action">💬 31 comments</span>
+                <span class="feed-action">🔗 Share</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="feed-post reveal reveal-delay-2">
+            <div class="feed-avatar" style="background:var(--green)">WK</div>
+            <div class="feed-content">
+              <div class="feed-header">
+                <span class="feed-name">Wanjiru Kamau</span>
+                <span class="feed-country">🇰🇪 Kenya</span>
+                <span class="feed-tag">Resource</span>
+                <span class="feed-time">1d ago</span>
+              </div>
+              <div class="feed-text">This prompt for generating full Figma-ready component specs using Claude is 🔥 I've been using it for every client project. Sharing it to the AI Hub. If you're doing product design + development at the same time, this changes everything.</div>
+              <div class="feed-actions">
+                <span class="feed-action">❤️ 89</span>
+                <span class="feed-action">💬 22 comments</span>
+                <span class="feed-action">🔗 Share</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section" id="cta">
+      <div class="cta-inner reveal">
+        <div class="section-tag" style="justify-content:center">Ready to Build?</div>
+        <h2 class="cta-title">Your idea. AI tools.<br><span style="color:var(--accent)">Real impact.</span></h2>
+        <p class="cta-sub">Join thousands of builders across Africa who are learning, shipping, and solving real problems with AI. It's free, always.</p>
+        <div class="cta-actions">
+          <a href="#" class="btn-primary" style="font-size:1.1rem;padding:1rem 2.5rem">⚡ Join Vibe Academy Free</a>
+          <a href="#projects" class="btn-secondary" style="font-size:1.1rem;padding:1rem 2.5rem">See Projects First</a>
+        </div>
+        <p style="margin-top:1.5rem;color:var(--muted);font-size:.85rem">No credit card. No gatekeeping. Just build.</p>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-inner">
+        <div class="footer-top">
+          <div>
+            <div class="footer-brand"><span class="bolt">⚡</span> Vibe Academy</div>
+            <p class="footer-tagline">An AI-first community empowering African builders to learn, collaborate, and launch impactful products. From Prompt to Product.</p>
+            <p style="margin-top:1rem;font-family:var(--font-mono);font-size:.75rem;color:var(--accent)">Learn. Build. Launch.</p>
+          </div>
+          <div>
+            <div class="footer-col-title">Platform</div>
+            <ul class="footer-links">
+              <li><a href="#">Community</a></li>
+              <li><a href="#">Project Showcase</a></li>
+              <li><a href="#">Challenges</a></li>
+              <li><a href="#">AI Hub</a></li>
+              <li><a href="#">Leaderboard</a></li>
+              <li><a href="#">Courses (Soon)</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-col-title">Resources</div>
+            <ul class="footer-links">
+              <li><a href="#">Resource Library</a></li>
+              <li><a href="#">Tutorials</a></li>
+              <li><a href="#">Prompts</a></li>
+              <li><a href="#">AI Workflows</a></li>
+              <li><a href="#">Tool Reviews</a></li>
+            </ul>
+          </div>
+          <div>
+            <div class="footer-col-title">Community</div>
+            <ul class="footer-links">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">Discord</a></li>
+              <li><a href="#">Twitter/X</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-copy">© 2025 Vibe Academy. Built in Africa, for Africa. ⚡</div>
+          <div class="footer-socials">
+            <a class="footer-social" href="#">𝕏</a>
+            <a class="footer-social" href="#">in</a>
+            <a class="footer-social" href="#">gh</a>
+            <a class="footer-social" href="#">dc</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="src/js/main.js"></script>
+</body>
+</html>

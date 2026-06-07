@@ -1,0 +1,99 @@
+/* COMMUNITY */
+.feed-preview {
+  display: grid;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.feed-post {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  transition: border-color 0.2s;
+}
+
+.feed-post:hover {
+  border-color: var(--border2);
+}
+
+.feed-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #000;
+}
+
+.feed-content {
+  flex: 1;
+}
+
+.feed-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.feed-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.feed-country {
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.feed-time {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin-left: auto;
+}
+
+.feed-text {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+}
+
+.feed-actions {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.feed-action {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  color: var(--muted);
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.feed-action:hover {
+  color: var(--text);
+}
+
+.feed-tag {
+  display: inline-block;
+  background: rgba(77, 159, 255, 0.08);
+  border: 1px solid rgba(77, 159, 255, 0.15);
+  color: var(--blue);
+  font-size: 0.7rem;
+  padding: 0.15rem 0.5rem;
+  border-radius: 100px;
+  font-family: var(--font-mono);
+  margin-left: 0.4rem;
+}

@@ -1,0 +1,87 @@
+@import 'variables.css';
+@import 'base.css';
+@import 'utilities.css';
+
+/* Components */
+@import '../components/nav/nav.css';
+@import '../components/hero/hero.css';
+@import '../components/stats/stats.css';
+@import '../components/why-vibe/why-vibe.css';
+@import '../components/pillars/pillars.css';
+@import '../components/showcase/showcase.css';
+@import '../components/challenges/challenges.css';
+@import '../components/ai-hub/ai-hub.css';
+@import '../components/community/community.css';
+@import '../components/cta/cta.css';
+@import '../components/footer/footer.css';
+
+/* Shared Styles (Buttons, Cards, etc.) */
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #000;
+  font-family: var(--font-display);
+  font-weight: 700;
+  padding: 0.8rem 2rem;
+  border-radius: 100px;
+  font-size: 1rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(245, 166, 35, 0.35);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text);
+  font-family: var(--font-display);
+  font-weight: 600;
+  padding: 0.8rem 2rem;
+  border-radius: 100px;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 1px solid var(--border2);
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s, background 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn-secondary:hover {
+  transform: translateY(-2px);
+  border-color: var(--border);
+  background: var(--surface);
+}
+
+/* Sections Global Styles */
+section { padding: 6rem 2rem; }
+.section-inner { max-width: 1200px; margin: 0 auto; }
+.section-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--accent);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.section-tag::before { content: ''; width: 24px; height: 1px; background: var(--accent); }
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+.section-sub { color: var(--muted); font-size: 1.05rem; max-width: 520px; line-height: 1.7; }
