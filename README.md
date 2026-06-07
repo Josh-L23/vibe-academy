@@ -1,54 +1,89 @@
-# Vibe Academy ⚡
+# Vibe Academy ⚡ Learn. Build. Launch.
 
-An AI-first community empowering African builders to learn, collaborate, and launch impactful products.
+Vibe Academy is an **AI-first community** specifically designed for the next generation of African builders. We bridge the gap between "learning to code" and "building impactful products" by leveraging AI as a force multiplier.
 
-## Project Structure
+Our mission is to empower African developers, designers, and entrepreneurs to solve real-world problems—ranging from agricultural technology in Malawi to legal-tech in Nigeria—using the most advanced tools available.
 
-- `index.html`: Main entry point (semantic HTML).
-- `src/`: Frontend source code.
-  - `components/`: Modular UI components (HTML/CSS/JS).
-  - `styles/`: Global and base styles.
-  - `js/`: Application logic and animations.
-- `server/`: Node.js/Express backend.
-  - `db/`: Database connection and queries (PostgreSQL/Neon).
-- `schema.md`: PostgreSQL database schema definition.
-- `seed.sql`: Sample data for the database.
-- `implementation.md`: Documentation on the modular architecture.
+## 🌟 The Vision: From Prompt to Product
 
-## Getting Started
+In the era of AI, the barrier to building has never been lower. Vibe Academy focuses on teaching builders how to use AI tools (like Claude, Cursor, and ChatGPT) to accelerate the development lifecycle. We believe that building something real—even if imperfect—teaches more than any isolated course ever will.
 
-### 1. Installation
+## 🏗️ The Four Pillars
 
+1.  **🧠 Intelligence Amplified (Learn)**: Master AI, software development, and design thinking as one integrated skill set.
+2.  **🤝 Builders Together (Community)**: A judgment-free zone to ask questions, share discoveries, and get real feedback.
+3.  **🚀 Ship Real Things (Build)**: Join monthly challenges and showcase your work. We prioritize impact over skill points.
+4.  **🌍 Africa First (Impact)**: Every solution starts with a real problem in the African context—EdTech, AgriTech, FinTech, and beyond.
+
+## 🚀 Key Features
+
+-   **Project Showcase**: A curated gallery of products built by the community.
+-   **Monthly Challenges**: Competitive sprints to solve specific regional problems.
+-   **AI Hub**: A marketplace for battle-tested prompts, optimized workflows, and honest tool reviews.
+-   **Community Feed**: A professional social layer for builders to share "wins," ask questions, and collaborate.
+-   **Gamified Leaderboard**: Recognition for top contributors and builders across the continent.
+
+---
+
+## 🛠️ Technical Stack & Architecture
+
+Vibe Academy is built with a modern, modular architecture designed for high performance and scalability.
+
+-   **Frontend**: Vanilla HTML5/CSS3/JS (ES Modules) bundled with **Vite**.
+-   **Backend**: **Node.js** & **Express** API.
+-   **Database**: **PostgreSQL** hosted on **Neon** (Serverless Postgres).
+-   **Architecture**: Modular component-based structure for reusable UI and clean logic.
+
+## 📂 Project Structure
+
+```text
+/
+├── index.html              # Main semantic entry point
+├── src/                    # Frontend source
+│   ├── components/         # Modular UI (Nav, Hero, AI-Hub, etc.)
+│   ├── styles/             # Modular CSS (Variables, Base, Utils)
+│   └── js/                 # ES Modules for logic & animations
+├── server/                 # Express Backend
+│   ├── db/                 # Neon Database connection
+│   └── index.js            # API Routes
+├── schema.md               # DB Schema & Design Rationale
+├── seed.sql                # Initial community data
+└── implementation.md       # Detailed refactoring strategy
+```
+
+## ⚙️ Getting Started
+
+### 1. Prerequisites
+-   Node.js (v18+)
+-   A free [Neon](https://neon.tech) account.
+
+### 2. Installation
 ```bash
 npm install
 ```
 
-### 2. Database Setup
+### 3. Database Setup
+1.  Create a project on **Neon**.
+2.  Execute the SQL in `schema.md` via the Neon SQL Editor to create tables.
+3.  Execute `seed.sql` to populate the platform with initial builders and projects.
+4.  Create a `.env` file:
+    ```bash
+    cp .env.example .env
+    ```
+5.  Add your `DATABASE_URL` from the Neon dashboard to the `.env` file.
 
-1. Create a project on [Neon](https://neon.tech).
-2. Run the SQL from `schema.md` in the Neon SQL Editor.
-3. (Optional) Run the SQL from `seed.sql` to populate sample data.
-4. Create a `.env` file by copying `.env.example`:
-   ```bash
-   cp .env.example .env
-   ```
-5. Update `DATABASE_URL` in `.env` with your Neon connection string.
-
-### 3. Development
-
-Start the frontend development server (Vite):
+### 4. Running the App
+**Frontend (Vite):**
 ```bash
 npm run dev
 ```
 
-Start the backend API server:
+**Backend (API):**
 ```bash
 npm run server
 ```
 
-## Features
+---
 
-- **Modular Architecture**: Easy to maintain and scale.
-- **PostgreSQL/Neon Integration**: Real-time database for community data.
-- **AI-First Design**: Built with modern builders in mind.
-- **Responsive & Interactive**: High-performance UI with custom animations.
+## 🌍 Join the Movement
+Vibe Academy is built in Africa, for Africa. ⚡
