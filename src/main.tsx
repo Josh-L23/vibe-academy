@@ -1,18 +1,14 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { SplineSceneBasic } from './components/ui/demo'
+import { GlowyWavesHero } from './components/ui/glowy-waves-hero'
 import './styles/main.css'
-import './styles/utilities.css'
-import './styles/variables.css'
-import './styles/base.css'
 
-// Find the element to mount our 3D component
-const splineElement = document.getElementById('spline-root')
-
-if (splineElement) {
-  ReactDOM.createRoot(splineElement).render(
+// Mount Hero
+const heroElement = document.getElementById('hero-root')
+if (heroElement) {
+  ReactDOM.createRoot(heroElement).render(
     <React.StrictMode>
-      <SplineSceneBasic />
+      <GlowyWavesHero />
     </React.StrictMode>,
   )
 }

@@ -1,17 +1,3 @@
-You are given a task to integrate an existing React component in the codebase
-
-The codebase should support:
-- shadcn project structure  
-- Tailwind CSS
-- Typescript
-
-If it doesn't, provide instructions on how to setup project via shadcn CLI, install Tailwind or Typescript.
-
-Determine the default path for components and styles. 
-If default path for components is not /components/ui, provide instructions on why it's important to create this folder
-Copy-paste this component to /components/ui folder:
-```tsx
-glowy-waves-hero-shadcnui.tsx
 import { motion, type Variants } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { useEffect, useRef } from "react";
@@ -32,15 +18,15 @@ interface WaveConfig {
 }
 
 const highlightPills = [
-  "Immersive visuals",
-  "Responsive motion",
-  "GPU friendly",
+  "AI-First Community",
+  "African Builders",
+  "Real-World Impact",
 ] as const;
 
 const heroStats: { label: string; value: string }[] = [
-  { label: "Live installations", value: "320+" },
-  { label: "Latency", value: "8ms" },
-  { label: "Teams onboarded", value: "120+" },
+  { label: "Builders Joined", value: "2,400+" },
+  { label: "Projects Built", value: "340+" },
+  { label: "African Countries", value: "12+" },
 ];
 
 const containerVariants: Variants = {
@@ -88,9 +74,7 @@ export function GlowyWavesHero() {
     const computeThemeColors = () => {
       const rootStyles = getComputedStyle(document.documentElement);
 
-      // Helper to convert any CSS color to a Canvas-compatible format
       const resolveColor = (variables: string[], alpha = 1) => {
-        // Create a temporary element to get computed color
         const tempEl = document.createElement("div");
         tempEl.style.position = "absolute";
         tempEl.style.visibility = "hidden";
@@ -103,12 +87,10 @@ export function GlowyWavesHero() {
         for (const variable of variables) {
           const value = rootStyles.getPropertyValue(variable).trim();
           if (value) {
-            // Try to set the background color using the CSS variable
             tempEl.style.backgroundColor = `var(${variable})`;
             const computedColor = getComputedStyle(tempEl).backgroundColor;
 
             if (computedColor && computedColor !== "rgba(0, 0, 0, 0)") {
-              // Convert RGB to RGBA with alpha if needed
               if (alpha < 1) {
                 const rgbMatch = computedColor.match(
                   /rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*[\d.]+)?\)/
@@ -131,42 +113,42 @@ export function GlowyWavesHero() {
       };
 
       return {
-        backgroundTop: resolveColor(["--background"], 1),
-        backgroundBottom: resolveColor(["--muted", "--background"], 0.95),
+        backgroundTop: resolveColor(["--black"], 1),
+        backgroundBottom: resolveColor(["--surface"], 0.95),
         wavePalette: [
           {
             offset: 0,
             amplitude: 70,
             frequency: 0.003,
-            color: resolveColor(["--primary"], 0.8),
+            color: resolveColor(["--accent"], 0.8),
             opacity: 0.45,
           },
           {
             offset: Math.PI / 2,
             amplitude: 90,
             frequency: 0.0026,
-            color: resolveColor(["--accent", "--primary"], 0.7),
+            color: resolveColor(["--accent2", "--accent"], 0.7),
             opacity: 0.35,
           },
           {
             offset: Math.PI,
             amplitude: 60,
             frequency: 0.0034,
-            color: resolveColor(["--secondary", "--foreground"], 0.65),
+            color: resolveColor(["--green"], 0.65),
             opacity: 0.3,
           },
           {
             offset: Math.PI * 1.5,
             amplitude: 80,
             frequency: 0.0022,
-            color: resolveColor(["--primary-foreground", "--foreground"], 0.25),
+            color: resolveColor(["--blue"], 0.25),
             opacity: 0.25,
           },
           {
             offset: Math.PI * 2,
             amplitude: 55,
             frequency: 0.004,
-            color: resolveColor(["--foreground"], 0.2),
+            color: resolveColor(["--purple"], 0.2),
             opacity: 0.2,
           },
         ] satisfies WaveConfig[],
@@ -299,7 +281,7 @@ export function GlowyWavesHero() {
 
   return (
     <section
-      className="relative isolate flex min-h-screen w-full items-center justify-center overflow-hidden bg-background"
+      className="relative isolate flex min-h-screen w-full items-center justify-center overflow-hidden bg-black"
       role="region"
       aria-label="Glowing waves hero section"
     >
@@ -310,9 +292,9 @@ export function GlowyWavesHero() {
       />
 
       <div className="absolute inset-0 -z-10 pointer-events-none">
-        <div className="absolute left-1/2 top-0 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-foreground/[0.035] blur-[140px] dark:bg-foreground/[0.06]" />
-        <div className="absolute bottom-0 right-0 h-[360px] w-[360px] rounded-full bg-foreground/[0.025] blur-[120px] dark:bg-foreground/[0.05]" />
-        <div className="absolute top-1/2 left-1/4 h-[400px] w-[400px] rounded-full bg-primary/[0.02] blur-[150px] dark:bg-primary/[0.05]" />
+        <div className="absolute left-1/2 top-0 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-accent/[0.035] blur-[140px]" />
+        <div className="absolute bottom-0 right-0 h-[360px] w-[360px] rounded-full bg-accent2/[0.025] blur-[120px]" />
+        <div className="absolute top-1/2 left-1/4 h-[400px] w-[400px] rounded-full bg-green/[0.02] blur-[150px]" />
       </div>
 
       <div className="relative z-10 mx-auto flex w-full max-w-6xl flex-col items-center px-6 py-24 text-center md:px-8 lg:px-12">
@@ -324,29 +306,28 @@ export function GlowyWavesHero() {
         >
           <motion.div
             variants={itemVariants}
-            className="mb-6 inline-flex items-center gap-2 rounded-full border border-border/40 bg-background/60 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-foreground/70 dark:border-border/60 dark:bg-background/70 dark:text-foreground/80"
+            className="mb-6 inline-flex items-center gap-2 rounded-full border border-border/40 bg-black/60 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-text/70"
           >
-            <Sparkles className="h-4 w-4 text-primary" aria-hidden="true" />
-            Reactive canvas hero
+            <Sparkles className="h-4 w-4 text-accent" aria-hidden="true" />
+            Vibe Academy ⚡ Learn. Build. Launch.
           </motion.div>
 
           <motion.h1
             variants={itemVariants}
-            className="mb-6 text-4xl font-semibold tracking-tight text-foreground md:text-6xl lg:text-7xl"
+            className="mb-6 text-4xl font-bold font-display tracking-tight text-text md:text-6xl lg:text-7xl"
           >
-            Welcome to immersive{" "}
-            <span className="bg-gradient-to-r from-primary via-primary/60 to-foreground/80 bg-clip-text text-transparent">
-              realtime playgrounds
+            Build African Products{" "}
+            <br />
+            <span className="bg-gradient-to-r from-accent via-accent2 to-text/80 bg-clip-text text-transparent">
+              From Prompt to Product
             </span>
           </motion.h1>
 
           <motion.p
             variants={itemVariants}
-            className="mx-auto mb-10 max-w-3xl text-lg text-foreground/70 md:text-2xl"
+            className="mx-auto mb-10 max-w-3xl text-lg font-body text-text/70 md:text-2xl"
           >
-            Build living surfaces that respond to every interaction. Craft
-            cinematic hero moments, responsive canvases, and luminous gradients
-            without leaving your design system.
+            Vibe Academy is an AI-first community specifically designed for the next generation of African builders. Leverage AI as a force multiplier and ship real things.
           </motion.p>
 
           <motion.div
@@ -354,32 +335,36 @@ export function GlowyWavesHero() {
             className="mb-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
           >
             <Button
+              asChild
               size="lg"
-              className="group gap-2 rounded-full px-8 text-base uppercase tracking-[0.2em]"
+              className="group gap-2 rounded-full px-8 text-base uppercase tracking-[0.2em] bg-accent hover:bg-accent2 text-black border-none"
             >
-              Launch Studio
-              <ArrowRight
-                className="h-4 w-4 transition-transform group-hover:translate-x-1"
-                aria-hidden="true"
-              />
+              <a href="auth.html">
+                Join the Community
+                <ArrowRight
+                  className="h-4 w-4 transition-transform group-hover:translate-x-1"
+                  aria-hidden="true"
+                />
+              </a>
             </Button>
             <Button
+              asChild
               size="lg"
               variant="outline"
-              className="rounded-full border-border/40 bg-background/60 px-8 text-base text-foreground/80 backdrop-blur transition-all hover:border-border/60 hover:bg-background/70 dark:border-border/50 dark:bg-background/40 dark:text-foreground/70 dark:hover:border-border/70 dark:hover:bg-background/50"
+              className="rounded-full border-border/40 bg-black/60 px-8 text-base text-text/80 backdrop-blur transition-all hover:border-border/60 hover:bg-black/70"
             >
-              Explore stories
+              <a href="#projects">Explore stories</a>
             </Button>
           </motion.div>
 
           <motion.ul
             variants={itemVariants}
-            className="mb-12 flex flex-wrap items-center justify-center gap-3 text-xs uppercase tracking-[0.2em] text-foreground/70 dark:text-foreground/80"
+            className="mb-12 flex flex-wrap items-center justify-center gap-3 text-xs uppercase tracking-[0.2em] text-text/70"
           >
             {highlightPills.map((pill) => (
               <li
                 key={pill}
-                className="rounded-full border border-border/40 bg-background/60 px-4 py-2 backdrop-blur dark:border-border/60 dark:bg-background/70"
+                className="rounded-full border border-border/40 bg-black/60 px-4 py-2 backdrop-blur"
               >
                 {pill}
               </li>
@@ -388,7 +373,7 @@ export function GlowyWavesHero() {
 
           <motion.div
             variants={statsVariants}
-            className="grid gap-4 rounded-2xl border border-border/30 bg-background/60 p-6 backdrop-blur-sm dark:border-border/60 dark:bg-background/70 sm:grid-cols-3"
+            className="grid gap-4 rounded-2xl border border-border/30 bg-black/60 p-6 backdrop-blur-sm sm:grid-cols-3"
           >
             {heroStats.map((stat) => (
               <motion.div
@@ -396,10 +381,10 @@ export function GlowyWavesHero() {
                 variants={itemVariants}
                 className="space-y-1"
               >
-                <div className="text-xs uppercase tracking-[0.3em] text-foreground/50 dark:text-foreground/60">
+                <div className="text-xs uppercase tracking-[0.3em] text-text/50">
                   {stat.label}
                 </div>
-                <div className="text-3xl font-semibold text-foreground">
+                <div className="text-3xl font-bold font-display text-text">
                   {stat.value}
                 </div>
               </motion.div>
@@ -410,39 +395,3 @@ export function GlowyWavesHero() {
     </section>
   );
 }
-
-
-demo.tsx
-import { GlowyWavesHero } from "@/components/ui/glowy-waves-hero-shadcnui"
-
-export default function Demo() {
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-background p-8">
-      <GlowyWavesHero />
-    </div>
-  )
-}
-
-```
-
-Install NPM dependencies:
-```bash
-lucide-react, framer-motion
-```
-
-Implementation Guidelines
- 1. Analyze the component structure and identify all required dependencies
- 2. Review the component's argumens and state
- 3. Identify any required context providers or hooks and install them
- 4. Questions to Ask
- - What data/props will be passed to this component?
- - Are there any specific state management requirements?
- - Are there any required assets (images, icons, etc.)?
- - What is the expected responsive behavior?
- - What is the best place to use this component in the app?
-
-Steps to integrate
- 0. Copy paste all the code above in the correct directories
- 1. Install external dependencies
- 2. Fill image assets with Unsplash stock images you know exist
- 3. Use lucide-react icons for svgs or logos if component requires them

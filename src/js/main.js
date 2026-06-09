@@ -1,6 +1,5 @@
 import { initScrollReveal, initProgressBar } from './animations.js';
 import { initCardTilt, animateCounter } from './utils.js';
-import { initTypewriter, initFloatingCodes, initHeroCanvas } from '../components/hero/hero.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // Global Animations
@@ -10,11 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Shared Utilities
   initCardTilt('.why-card, .project-card, .ai-card');
   
-  // Hero Section Logic
-  initTypewriter();
-  initFloatingCodes();
-  initHeroCanvas();
-
   // Stats Counter Logic
   const statIO = new IntersectionObserver((entries) => {
     entries.forEach(e => {
