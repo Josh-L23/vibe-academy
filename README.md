@@ -34,7 +34,24 @@ Vibe Academy is built with a modern, modular architecture designed for high perf
 -   **Database**: **PostgreSQL** hosted on **Neon** (Serverless Postgres).
 -   **Architecture**: Modular component-based structure for reusable UI and clean logic.
 
-## 📂 Project Structure
+## 🧪 3D Experiment (Feature Branch)
+
+This project has been enhanced with a 3D Interactive section using **Spline**, **React**, and **Tailwind CSS**.
+
+### New Tech Stack Additions
+- **React 18**: Used for complex interactive UI components.
+- **TypeScript**: Ensuring type safety across the new component library.
+- **Tailwind CSS**: Utility-first styling integrated with existing CSS variables.
+- **Spline**: Interactive 3D scenes.
+- **Framer Motion**: Smooth animations and transitions.
+
+### Component Structure
+The project now follows a modern component structure:
+- `src/components/ui/`: Contains reusable atomic components (Card, Spotlight, SplineScene).
+- `src/main.tsx`: Entry point for React-based features.
+- `lib/utils.ts`: Utility functions (e.g., `cn` for Tailwind class merging).
+
+> **Note on `/components/ui`**: Following shadcn/ui conventions, atomic components are placed in `src/components/ui` to maintain a clean separation between feature-specific components and reusable UI primitives.
 
 ```text
 /

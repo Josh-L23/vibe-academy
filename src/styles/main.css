@@ -1,3 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-black: #050508;
+  --color-surface: #0c0c14;
+  --color-surface2: #111120;
+  --color-border: #1e1e32;
+  --color-border2: #2a2a42;
+  --color-accent: #f5a623;
+  --color-accent2: #ff6b35;
+  --color-green: #00d68f;
+  --color-blue: #4d9fff;
+  --color-purple: #9b5de5;
+  --color-text: #e8e8f0;
+  --color-muted: #6b6b8a;
+
+  --font-display: "Syne", sans-serif;
+  --font-body: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --animate-spotlight: spotlight 2s ease .75s 1 forwards;
+
+  @keyframes spotlight {
+    0% {
+      opacity: 0;
+      transform: translate(-72%, -62%) scale(0.5);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(-50%,-40%) scale(1);
+    }
+  }
+}
+
 @import 'variables.css';
 @import 'base.css';
 @import 'utilities.css';
